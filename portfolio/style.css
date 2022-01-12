@@ -1,0 +1,574 @@
+/* Les nombreux "background-color: red;" commentés sont ici pour le debug */
+
+body {
+
+background-size: cover;
+background-attachment: fixed;
+background-image: url("images/fond_montagne_1.jpg") ;
+font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 1010%;
+    width: 100%;
+    z-index: -11;
+    /* background-color: red; */
+}
+
+h1 {
+    font-size: 400%;
+}
+
+a:any-link {
+    color:rgb(28, 64, 129);
+}
+
+.titre {
+    margin-left: 15%;
+    margin-right: 15%;
+    text-align: center;
+    color: white;
+}
+
+.flocon {
+    background-color: rgba(255,255,255,0.5);
+    border-radius: 3em;
+    z-index: -10;
+    position: absolute;
+}
+
+.back_to_top {
+    background: white;
+    width: 2em;
+    height: 4em;
+    margin-left: -1%;
+    margin-bottom: -3%;
+    margin-top: 3%;
+    text-align: center;
+    align-content: center;
+    border-top-right-radius: 2em;
+    border-bottom-right-radius: 2em;
+    transition: 1s;
+    color: rgba(165, 42, 42, 0);
+}
+
+.back_to_top > h2 {
+    position: static;
+    font-size: 100%;
+    padding-top: 17%;
+    margin-right: -50%;
+    transition-delay: 1s;
+    transition: 0.5s;
+}
+
+.back_to_top:hover {
+    width: 8em;
+}
+
+.back_to_top:hover > h2 {
+    margin-right: 0%;
+    color: brown;
+}
+
+/* Boutons de la partie principale, l'accueil */
+
+.side_screen_content {
+    background: white;
+    width: 2em;
+    height: 4em;
+    right: 0%;
+    text-align: center;
+    align-content: center;
+    border-top-left-radius: 2em;
+    border-bottom-left-radius: 2em;
+    transition: 1s;
+    color: white;
+    position: absolute;
+}
+
+.side_screen_content > h2 {
+    position: static;
+    font-size: 100%;
+    padding-top: 8%;
+    margin-left: -50%;
+    color: rgba(165, 42, 42, 0);
+    transition-delay: 1s;
+    transition: 0.5s;
+}
+
+.side_screen_content > h2 > a{
+    color: rgba(165, 42, 42, 0);
+    transition: 0.5s;
+}
+
+.side_screen_content:hover {
+    width: 7em;
+}
+
+.side_screen_content:hover > h2 {
+    margin-left: 15%;
+    color: brown;
+}
+
+.side_screen_content:hover > h2 > a {
+    color: brown;
+}
+
+#pdata > .extends {
+    margin-left: 15%;
+    color: brown;
+}
+
+#pdata {
+    top: 20%;
+}
+
+#pdf {
+    top: 30%;
+}
+
+#pdf > h2 {
+    margin-top: 10%;
+    margin-left: -150%;
+    /* color: red; */
+}
+
+#pdf:hover > h2 {
+    margin-left: 15%;
+}
+
+
+
+.content {
+    background: white;
+    border-radius: 500px;
+    height: 75px;
+    width: 200px;
+    position: static;
+    text-align: center;
+    align-content: center;
+    z-index: 0;
+}
+
+.content > h2{  
+    position: static;
+    color: white;
+    font-size: 100%;
+    transition: 1s;
+    padding-top: 7%;
+}
+
+.content > h2:hover{
+    color: #36160c;
+}
+
+
+#w_exp {
+    top: 66%;
+    left: 5%;
+    position: absolute;
+}
+
+#univ_proj {
+    top: 85%;
+    left: 0.5%;
+    position: absolute;
+}
+
+#form {
+    top: 79%;
+    left: 21%;
+    position: absolute;
+}
+
+#qual {
+    top: 86%;
+    left: 42%;
+    position: absolute;
+}
+
+#hobb {
+    top: 86%;
+    right: 0.5%;
+    position: absolute;
+}
+
+#lang {
+    top: 79%;
+    right: 21%;
+    position: absolute;
+}
+
+#ref {
+    top: 68%;
+    right: 5%;
+    position: absolute;
+}
+
+
+
+
+/* sections de contenu */
+.sec_head {
+    margin-top: 20%;
+    height: 5em;
+    background: white;
+    color: brown;
+    padding-top: 0.5%;
+    padding-left: 3%;
+    margin-left: -1%;
+    margin-right: -0.3%;
+}
+
+.line {
+    background: brown;
+    height: 1px;
+    margin-top: -1%;
+    margin-left: -3.1%;
+}
+
+
+
+
+
+.sec_content {
+    background-color: white;
+    padding: 1%;
+    padding-left: 3%;
+    margin-top: 5%;
+    border-radius: 3em;
+    margin-left: 15%;
+    margin-right: 15%;
+    z-index: 5;
+    position: relative;
+}
+
+.sec_content > .xp_form_date {
+    color: rgb(8, 91, 8);
+}
+
+.sec_content > .xp_form_div {
+    margin-top: -6%;
+    padding-left: 17%;
+}
+
+.sec_content > p {
+    color: brown;
+    padding-left: 17%;
+}
+
+.sec_content > .sec_date {
+    vertical-align: middle;
+}
+
+
+
+
+section#perso_data {
+    top: 15%;
+    left: 25%;
+    height: 70%;
+    width: 50%;
+    border: 2px;
+    border-color: lightgrey;
+    border-radius: 2em;
+    position: absolute;
+    background-color: white;
+}
+
+section#perso_data > div#moi {
+    margin-top: -5%;
+    padding-left: 10%;
+    padding-right: 10%;
+    z-index: 10;
+}
+
+section#perso_data > div#moi > p {
+    z-index: 11;
+    color: brown;
+}
+
+section#perso_data > .rick {
+    z-index: 20;
+    height: 45em;
+    width: 45em;
+    top: 0;
+    margin-top: -15%;
+    position: absolute;
+}
+
+section#perso_data > div > div#img_moi {
+    text-align: center;
+    z-index: 10;
+    position: relative;
+    /* background-color: rgba(255,0,0,0.5); */
+    height: 10em;
+    width: 10em;
+    border-top-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+    border-bottom-left-radius: 2em;
+    border-top-right-radius: 2em;
+}
+
+section#perso_data > div > div#img_moi > #hitbox {
+    z-index: 15;
+    position: relative;
+    /* background-color: rgba(255,0,0,0.5); */
+    height: 10em;
+    width: 10em;
+    margin-top: -102%;
+    border-top-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+    border-bottom-left-radius: 2em;
+    border-top-right-radius: 2em;
+}
+
+section#perso_data > div > div#img_moi > h2 {
+    z-index: 12;
+    position: relative;
+    margin-top: -65%;
+    transition: 1s;
+    align-self: center;
+    color: rgba(255,255,255,0.5);
+}
+
+section#perso_data > div#moi > .gris {
+    color: grey;
+}
+
+section#perso_data > div > div > img {
+    height: 10em;
+    width: 10em;
+    border-top-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+    border-bottom-left-radius: 2em;
+    border-top-right-radius: 2em;
+    transition: 1s;
+}
+
+section#perso_data > div > div > img:hover {
+    filter: brightness(50%);
+}
+
+section#perso_data > div#coo {
+    margin-top: -50%;
+    padding-left: 40%;
+    padding-right: 10%;
+}
+
+div#pers_titre {
+    margin-left: 30%;
+    margin-right: 30%;
+    color: brown;
+    text-align: center;
+}
+
+
+
+section#sec_w_exp {
+    margin-top: 50%;
+}
+
+section#sec_qual {
+    text-align: left;
+    transition: 1s ease all;
+}
+
+section#sec_lang {
+    text-align: left;
+    justify-content: left;
+    align-items: left;
+    transition: 1s ease all;
+}
+
+.skill_content {
+    background-color: white;
+    padding: 1%;
+    padding-left: 3%;
+    margin-top: 5%;
+    border-radius: 3em;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+.skill_content > p {
+    font-size: 100%;
+    font-weight: bold;
+    margin-top: 5%;
+}
+
+.skillBar {
+    margin-top: -5%;
+    background-color: lightgrey;
+    width: 73%;
+    height: 20px;
+    margin-left: 20%;
+    margin-bottom: 3%;
+    border-radius: 1em;
+}
+
+.skillBar > span {
+    margin-top: 0px;
+    background-color: rgba(165, 52, 52, 1);
+    transition: 2s;
+    width: 5%;
+    height: 20px;
+    border-radius: 1em;
+    position: absolute
+}
+
+section#sec_ref > .sec_content {
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+.div_ref {
+    /* text-align: center; */
+}
+
+.div_ref > img {
+    border-top-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+    border-bottom-left-radius: 2em;
+    border-top-right-radius: 2em;
+    margin-top: -15%;
+    /* margin-left: -1.5%; */
+    height: 10em;
+    width: 10em;
+    transition: 2s ease;
+}
+
+.div_ref > h5 {
+    color: grey;
+}
+
+div#bouchon {
+    padding-top: 16%;
+    margin-right: 59%;
+    margin-left: 5%;
+    position: relative;
+    /* background-color: rgba(255,0,0,0.5); */
+}
+
+div#damas {
+    margin-top: 28%;
+    margin-left: 5%;
+    padding-bottom: 10%;
+    position: relative;
+    /* background-color: rgba(0,255,0,0.5); */
+}
+
+.div_ref > h3 {
+    padding-left: 30%;
+}
+
+.text > h4 {
+    color:brown;
+}
+
+.text#txt_bouchon {
+    margin-top: -70%;
+    margin-left: 85%;
+    margin-right: -100%;
+    /* background-color: red; */
+}
+
+.text#txt_damas {
+    margin-top: -24%;
+    margin-left: 32%;
+    /* background-color: red; */
+}
+
+div#gbouchon {
+    margin-top: 5%;
+    height: 40%;
+    width: 87%;
+    border-bottom-left-radius: 1em;
+    border-top-right-radius: 1em;
+}
+
+div#gdamas {
+    margin-top: 35%;
+    height: 40%;
+    width: 87%;
+    border-bottom-left-radius: 1em;
+    border-top-right-radius: 1em;
+}
+
+
+
+section#sec_hobb > .sec_content {
+    font-size: 100%;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+
+section#sec_hobb > .back_to_top {
+    margin-bottom: 10%;
+}
+
+.hobb_title {
+    width: 64%;
+    font-weight: bold;
+    color: black;
+    padding: 2%;
+}
+
+p.hobb_comment {
+    padding: 1%;
+    padding-left: 5%;
+    padding-right: 5%;
+    color: white;
+}
+
+/* section#sec_hobb {
+    padding-bottom: 1%;
+} */
+
+section#sec_hobb > .sec_content > .fond_gris {
+    height: 10%;
+    width: 95%;
+    position: relative;
+}
+
+
+
+
+/* Autres trucs fort utiles */
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.gris {
+    color:  grey;
+}
+
+div.fond_gris {
+    margin-top: 2.5%;
+    height: 90%;
+    width: 80%;
+    border-radius: 3em;
+    background-color: lightgray;
+    position: absolute;
+}
+
+div.fond_marron {
+    width: 70%;
+    border-bottom-left-radius: 3em;
+    border-top-right-radius: 3em;
+    border-bottom-right-radius: 1em;
+    border-top-left-radius: 1em;
+    margin-top: -3%;
+    margin-left: 8%;
+    background-color: brown;
+    text-align: center;
+}
